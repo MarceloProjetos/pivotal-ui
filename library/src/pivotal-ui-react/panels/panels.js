@@ -4,8 +4,6 @@ import classnames from 'classnames';
 import {mergeProps} from 'pui-react-helpers';
 import 'pui-css-panels';
 
-const types = PropTypes;
-
 const paddingTypes = [];
 ['p', 'm'].forEach(type => {
   ['l', 'r', 't', 'b', 'h', 'v', 'a'].forEach(location => {
@@ -17,7 +15,7 @@ const paddingTypes = [];
 
 export class PanelTitle extends React.Component {
   static propTypes = {
-    className: types.string
+    className: PropTypes.string
   }
 
   render() {
@@ -29,9 +27,9 @@ export class PanelTitle extends React.Component {
 
 class PanelHeader extends React.Component {
   static propTypes = {
-    actions: types.node,
-    header: types.node,
-    subtitle: types.node
+    actions: PropTypes.node,
+    header: PropTypes.node,
+    subtitle: PropTypes.node
   }
 
   render() {
@@ -61,7 +59,7 @@ class PanelHeader extends React.Component {
 
 class PanelFooter extends React.Component {
   static propTypes = {
-    footer: types.node
+    footer: PropTypes.node
   }
 
   render() {
@@ -79,19 +77,19 @@ class PanelFooter extends React.Component {
 
 export class Panel extends React.Component {
   static propTypes = {
-    header: types.node,
-    footer: types.node,
-    actions: types.node,
-    subtitle: types.node,
-    innerClassName: types.string,
+    header: PropTypes.node,
+    footer: PropTypes.node,
+    actions: PropTypes.node,
+    subtitle: PropTypes.node,
+    innerClassName: PropTypes.string,
     padding: (props, propName, componentName) => {
       if (props.padding && !props.padding.split(' ').every(pad => paddingTypes.indexOf(pad) >= 0)) {
         return new Error(`Invalid padding type used in ${componentName}`);
       }
     },
-    scrollable: types.oneOfType([
-      types.bool,
-      types.number
+    scrollable: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.number
     ])
   }
 
@@ -123,7 +121,7 @@ export class ShadowPanel extends Panel {
 
   static propTypes = {
     ...Panel.propTypes,
-    shadowLevel: types.oneOf([1, 2, 3, 4])
+    shadowLevel: PropTypes.oneOf([1, 2, 3, 4])
   }
 
   static defaultProps = {

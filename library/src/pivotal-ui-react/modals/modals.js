@@ -7,7 +7,6 @@ import {mergeProps} from 'pui-react-helpers';
 import 'pui-css-modals';
 import {Icon} from 'pui-react-iconography';
 
-const types = PropTypes;
 const ESC_KEY = 27;
 const privates = new WeakMap();
 
@@ -25,17 +24,17 @@ function bodyIsAllowedToScroll(document) {
 
 export class BaseModal extends mixin(React.Component).with(Animation) {
   static propTypes = {
-    acquireFocus: types.bool,
-    animation: types.bool,
-    size: types.string,
-    dialogClassName: types.string,
-    keyboard: types.bool,
-    onEntered: types.func,
-    onExited: types.func,
-    onHide: types.func,
-    show: types.bool,
-    title: types.node,
-    getDocument: types.func
+    acquireFocus: PropTypes.bool,
+    animation: PropTypes.bool,
+    size: PropTypes.string,
+    dialogClassName: PropTypes.string,
+    keyboard: PropTypes.bool,
+    onEntered: PropTypes.func,
+    onExited: PropTypes.func,
+    onHide: PropTypes.func,
+    show: PropTypes.bool,
+    title: PropTypes.node,
+    getDocument: PropTypes.func
   }
 
   static defaultProps = {

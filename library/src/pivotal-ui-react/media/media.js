@@ -3,21 +3,19 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames'
 import 'pui-css-media'
 
-const types = PropTypes
-
 const shortSizes = {xsmall: 'xs', small: 'sm', medium: 'md', large: 'lg'}
 const charSizes = {small: 's', medium: 'm', large: 'l', xlarge: 'xl'}
 const paddingDirection = {left: 'r', right: 'l'}
 
 export class Media extends React.Component {
   static propTypes = {
-    image: types.node.isRequired,
-    innerClassName: types.string,
-    mediaSpacing: types.oneOf(['small', 'medium', 'large', 'xlarge']),
-    stackSize: types.oneOf(['xsmall', 'small', 'medium', 'large']),
-    vAlign: types.oneOf(['middle', 'bottom']),
-    placement: types.oneOf(['left', 'right']),
-    className: types.string
+    image: PropTypes.node.isRequired,
+    innerClassName: PropTypes.string,
+    mediaSpacing: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
+    stackSize: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
+    vAlign: PropTypes.oneOf(['middle', 'bottom']),
+    placement: PropTypes.oneOf(['left', 'right']),
+    className: PropTypes.string
   }
 
   static defaultProps = {

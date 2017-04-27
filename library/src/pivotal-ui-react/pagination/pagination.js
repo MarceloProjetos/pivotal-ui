@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import {mergeProps} from 'pui-react-helpers';
 import 'pui-css-pagination';
 
-const types = PropTypes;
-
 class PaginationButton extends React.Component {
   static propTypes = {
-    content: types.node,
-    active: types.bool,
-    onSelect: types.func,
-    eventKey: types.oneOfType([types.number, types.string])
+    content: PropTypes.node,
+    active: PropTypes.bool,
+    onSelect: PropTypes.func,
+    eventKey: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   }
 
   click = e => {
@@ -31,11 +29,11 @@ class PaginationButton extends React.Component {
 
 export class Pagination extends React.Component {
   static propTypes = {
-    items: types.number,
-    next: types.bool,
-    prev: types.bool,
-    activePage: types.number,
-    onSelect: types.func
+    items: PropTypes.number,
+    next: PropTypes.bool,
+    prev: PropTypes.bool,
+    activePage: PropTypes.number,
+    onSelect: PropTypes.func
   }
 
   static defaultProps = {

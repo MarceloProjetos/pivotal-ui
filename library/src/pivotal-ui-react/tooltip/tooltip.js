@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 import 'pui-css-tooltips'
 import classnames from 'classnames'
 
-const types = PropTypes;
-
 export class Tooltip extends React.Component {
   static propTypes = {
-    visible: types.bool,
-    size: types.oneOf(['auto','sm', 'md', 'lg'])
+    visible: PropTypes.bool,
+    size: PropTypes.oneOf(['auto','sm', 'md', 'lg'])
   }
 
   static defaultProps = {
@@ -37,14 +35,14 @@ export class Tooltip extends React.Component {
 
 export class TooltipTrigger extends React.Component {
   static propTypes = {
-    tooltip: types.node.isRequired,
-    placement: types.oneOf(['left', 'right', 'bottom', 'top']),
-    trigger: types.oneOf(['hover', 'click']),
-    clickHideDelay: types.number,
-    onEntered: types.func,
-    onExited: types.func,
-    theme: types.oneOf(['dark', 'light']),
-    size: types.oneOf(['auto', 'sm', 'md', 'lg'])
+    tooltip: PropTypes.node.isRequired,
+    placement: PropTypes.oneOf(['left', 'right', 'bottom', 'top']),
+    trigger: PropTypes.oneOf(['hover', 'click']),
+    clickHideDelay: PropTypes.number,
+    onEntered: PropTypes.func,
+    onExited: PropTypes.func,
+    theme: PropTypes.oneOf(['dark', 'light']),
+    size: PropTypes.oneOf(['auto', 'sm', 'md', 'lg'])
   }
 
   static defaultProps = {

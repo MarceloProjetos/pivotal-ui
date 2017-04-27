@@ -4,12 +4,10 @@ import uniqueid from 'lodash.uniqueid';
 import {mergeProps} from 'pui-react-helpers';
 import 'pui-css-forms';
 
-const types = PropTypes;
-
 export class Toggle extends React.Component {
   static propTypes = {
-    id: types.string,
-    onChange: types.func,
+    id: PropTypes.string,
+    onChange: PropTypes.func,
     size: PropTypes.oneOf(['small', 'medium', 'large'])
   }
 

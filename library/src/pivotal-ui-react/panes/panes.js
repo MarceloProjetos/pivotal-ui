@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 import {mergeProps} from 'pui-react-helpers';
 import 'pui-css-panes';
 
-const types = PropTypes;
-
 export class BasePane extends React.Component {
   static propTypes = {
-    className: types.string,
-    innerClassName: types.string
+    className: PropTypes.string,
+    innerClassName: PropTypes.string
   }
 
   render() {
@@ -24,7 +22,7 @@ export class BasePane extends React.Component {
 
 export class Pane extends React.Component {
   static propTypes = {
-    className: types.string
+    className: PropTypes.string
   }
 
   render() {

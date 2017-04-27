@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import PropTypes from 'prop-types';;
 
 function rootClick(e) {
@@ -13,7 +12,7 @@ const privates = new WeakMap();
 export default ParentClass => {
   return class Scrim extends ParentClass {
     static propTypes = {
-      disableScrim: types.bool
+      disableScrim: PropTypes.bool
     };
 
     constructor(props, context) {

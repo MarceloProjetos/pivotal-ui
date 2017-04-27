@@ -5,8 +5,6 @@ import {Dropdown, DropdownItem} from 'pui-react-dropdowns';
 import classnames from 'classnames';
 import {mergeProps} from 'pui-react-helpers';
 
-const types = PropTypes;
-
 export class Notifications extends React.Component {
   static propTypes = {
     size: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
@@ -71,7 +69,7 @@ export class AlertNotifications extends React.Component {
 
 export class NotificationItem extends React.Component {
   static propTypes = {
-    href: types.string
+    href: PropTypes.string
   }
 
   render() {

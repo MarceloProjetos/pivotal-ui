@@ -4,15 +4,13 @@ import classnames from 'classnames';
 import {mergeProps} from 'pui-react-helpers';
 import 'pui-css-tile-layout';
 
-const types = PropTypes;
-
 export class TileLayout extends React.Component {
   static propTypes = {
-    columns: types.oneOfType([
-      types.number,
-      types.object
+    columns: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.object
     ]),
-    noGutter: types.bool
+    noGutter: PropTypes.bool
   }
 
   getColumnClasses = columns => {
