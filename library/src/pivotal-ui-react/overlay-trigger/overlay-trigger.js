@@ -6,7 +6,7 @@ import TetherComponent from 'react-tether'
 import {default as mixin} from 'pui-react-mixins'
 import Scrim from 'pui-react-mixins/mixins/scrim_mixin'
 
-const types = React.PropTypes
+import PropTypes from 'prop-types';
 
 const TETHER_PLACEMENTS = {
   top: 'bottom center',

@@ -1,12 +1,13 @@
 import Animation from 'pui-react-mixins/mixins/animation_mixin';
 import classnames from 'classnames';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {default as mixin} from 'pui-react-mixins';
 import {mergeProps} from 'pui-react-helpers';
 import 'pui-css-modals';
 import {Icon} from 'pui-react-iconography';
 
-const types = React.PropTypes;
+const types = PropTypes;
 const ESC_KEY = 27;
 const privates = new WeakMap();
 

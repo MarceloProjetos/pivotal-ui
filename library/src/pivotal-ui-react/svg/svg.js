@@ -1,6 +1,6 @@
 import React from 'react';
 
-const types = React.PropTypes;
+const types = PropTypes;
 
 export class Svg extends React.Component {
   static propTypes = {

@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Collapsible} from 'pui-react-collapsible';
 import classnames from 'classnames';
 
-const types = React.PropTypes;
+const types = PropTypes;
 
 class SmallTab extends React.Component {
   static propTypes = {

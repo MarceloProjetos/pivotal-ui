@@ -1,8 +1,9 @@
 import {EventEmitter} from 'events';
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 
-const types = React.PropTypes;
+const types = PropTypes;
 
 let destinationPortals = {};
 const emitter = new EventEmitter();

@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {mergeProps} from 'pui-react-helpers';
 import 'pui-css-panes';
 
-const types = React.PropTypes;
+const types = PropTypes;
 
 export class BasePane extends React.Component {
   static propTypes = {

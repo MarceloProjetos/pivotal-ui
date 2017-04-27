@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import 'pui-css-tooltips'
 import classnames from 'classnames'
 
-const types = React.PropTypes;
+const types = PropTypes;
 
 export class Tooltip extends React.Component {
   static propTypes = {

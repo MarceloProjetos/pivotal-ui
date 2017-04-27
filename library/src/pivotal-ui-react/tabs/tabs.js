@@ -10,7 +10,7 @@ import 'pui-css-tabs';
 
 export {Tab};
 
-const types = React.PropTypes;
+import PropTypes from 'prop-types';;
 
 const privates = new WeakMap();
 

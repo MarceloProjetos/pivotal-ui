@@ -5,7 +5,7 @@ import sortBy from 'lodash.sortby';
 import {mergeProps} from 'pui-react-helpers';
 import 'pui-css-tables';
 
-const types = React.PropTypes;
+import PropTypes from 'prop-types';;
 
 const SORT_ORDER = {
   asc: 0,

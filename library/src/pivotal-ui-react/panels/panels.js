@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import {mergeProps} from 'pui-react-helpers';
 import 'pui-css-panels';
 
-const types = React.PropTypes;
+const types = PropTypes;
 
 const paddingTypes = [];
 ['p', 'm'].forEach(type => {
@@ -132,7 +133,7 @@ export class ShadowPanel extends Panel {
 
 export class SimplePanel extends Panel { kind = 'panel-simple'; }
 export class BasicPanel extends Panel { kind = 'panel-basic'; }
-export class BasicPanelAlt extends Panel { kind = 'panel-basic-alt'; } 
-export class ClickablePanel extends Panel { kind = 'panel-clickable'; } 
-export class ClickableAltPanel extends Panel { kind = 'panel-clickable-alt'; } 
+export class BasicPanelAlt extends Panel { kind = 'panel-basic-alt'; }
+export class ClickablePanel extends Panel { kind = 'panel-clickable'; }
+export class ClickableAltPanel extends Panel { kind = 'panel-clickable-alt'; }
 export class HighlightPanel extends Panel { kind = 'panel-highlight'; } 

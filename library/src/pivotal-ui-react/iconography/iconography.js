@@ -4,8 +4,6 @@ import {Svg} from 'pui-react-svg'
 import 'pui-css-iconography'
 import classnames from 'classnames'
 
-const types = React.PropTypes
-
 class SvgIcon extends Svg {
   svgPathLoader = src => {
     try {
@@ -20,9 +18,9 @@ class SvgIcon extends Svg {
 
 export class Icon extends React.Component {
   static propTypes = {
-    src: types.string.isRequired,
-    style: types.object,
-    verticalAlign: types.oneOf(['middle', 'baseline'])
+    src: PropTypes.string.isRequired,
+    style: PropTypes.object,
+    verticalAlign: PropTypes.oneOf(['middle', 'baseline'])
   }
 
   static defaultProps = {

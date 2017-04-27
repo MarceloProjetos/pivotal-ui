@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Animation from 'pui-react-mixins/mixins/animation_mixin';
 import TabContent from './tab_content';
 import TabHeaders from './tab_headers';
 import classnames from 'classnames';
 import {default as mixin} from 'pui-react-mixins';
 
-const types = React.PropTypes;
+const types = PropTypes;
 
 export class LargeTabs extends mixin(React.Component).with(Animation) {
   static propTypes = {

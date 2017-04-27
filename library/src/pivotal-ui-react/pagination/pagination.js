@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {mergeProps} from 'pui-react-helpers';
 import 'pui-css-pagination';
 
-const types = React.PropTypes;
+const types = PropTypes;
 
 class PaginationButton extends React.Component {
   static propTypes = {

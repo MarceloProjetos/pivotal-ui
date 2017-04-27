@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import classnames from 'classnames'
 import 'pui-css-media'
 
-const types = React.PropTypes
+const types = PropTypes
 
 const shortSizes = {xsmall: 'xs', small: 'sm', medium: 'md', large: 'lg'}
 const charSizes = {small: 's', medium: 'm', large: 'l', xlarge: 'xl'}

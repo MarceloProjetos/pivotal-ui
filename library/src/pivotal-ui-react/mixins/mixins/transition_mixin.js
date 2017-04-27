@@ -1,5 +1,5 @@
 import React from 'react';
-const types = React.PropTypes;
+import PropTypes from 'prop-types';;
 
 export default ParentClass => {
   return class Transition extends ParentClass {

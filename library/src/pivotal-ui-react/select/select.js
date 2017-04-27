@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {DefaultButton} from 'pui-react-buttons';
 import {mergeProps} from 'pui-react-helpers';
 import {Icon} from 'pui-react-iconography';
@@ -9,7 +10,7 @@ import classnames from 'classnames';
 
 import 'pui-css-select';
 
-const types = React.PropTypes;
+const types = PropTypes;
 
 const isBlank = value => [null, undefined].includes(value);
 
