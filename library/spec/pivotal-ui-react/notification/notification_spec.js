@@ -1,6 +1,6 @@
 import '../spec_helper'
 import {Notifications, NotificationItem, AlertNotifications} from 'pui-react-notifications'
-import ReactTestUtils from 'react-addons-test-utils'
+
 
 let subject
 

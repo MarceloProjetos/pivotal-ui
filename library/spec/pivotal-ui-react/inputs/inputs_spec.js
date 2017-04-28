@@ -1,6 +1,6 @@
 import '../spec_helper'
 import {Input} from 'pui-react-inputs'
-import ReactTestUtils from 'react-addons-test-utils'
+
 import {findByClass, findAllByClass, findByTag, findAllByTag} from '../spec_helper'
 
 describe('Input Component', () => {

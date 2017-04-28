@@ -1,6 +1,6 @@
 import '../spec_helper'
 import {Icon} from 'pui-react-iconography'
-import ReactTestUtils from 'react-addons-test-utils'
+
 import {findByClass} from '../spec_helper'
 
 describe('iconography', () => {

@@ -1,4 +1,5 @@
 import {mergeProps} from 'pui-react-helpers'
+import PropTypes from 'prop-types';
 import React from 'react'
 import {Svg} from 'pui-react-svg'
 import 'pui-css-iconography'

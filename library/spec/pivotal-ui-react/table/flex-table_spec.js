@@ -1,5 +1,5 @@
 import '../spec_helper'
-import ReactTestUtils from 'react-addons-test-utils'
+
 import {FlexTable, FlexTableCell, FlexTableRow} from 'pui-react-table'
 import {findByClass, findAllByClass, findAllByTag, findByTag, clickOn} from '../spec_helper'
 

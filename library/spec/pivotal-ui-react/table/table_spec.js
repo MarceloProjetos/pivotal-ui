@@ -1,6 +1,7 @@
 import '../spec_helper'
-import ReactTestUtils from 'react-addons-test-utils'
+
 import {Table, TableCell, TableRow} from 'pui-react-table'
+import PropTypes from 'prop-types'
 
 describe('Table', function() {
   let columns, data
@@ -293,7 +294,7 @@ describe('Table', function() {
     let CustomCell
     beforeEach(function() {
       CustomCell = ({value, index, rowDatum}) => <td className="custom">{`${rowDatum.instances}-${index}: ${value}`}</td>
-      CustomCell.propTypes = {value: React.PropTypes.any, index: React.PropTypes.number, rowDatum: React.PropTypes.object}
+      CustomCell.propTypes = {value: PropTypes.any, index: PropTypes.number, rowDatum: PropTypes.object}
 
       columns = [
         {
@@ -378,10 +379,10 @@ describe('Table', function() {
 
   describe('with a custom table row', function() {
     const CustomRow = ({index, children}) => (<TableRow className={`row-${index}`}>{children}</TableRow>)
-    CustomRow.propTypes = {index: React.PropTypes.number}
+    CustomRow.propTypes = {index: PropTypes.number}
 
     const CustomCell = ({value}) => (<TableCell>Days since Sunday: {(new Date(value)).getDay()}</TableCell>)
-    CustomCell.propTypes = {value: React.PropTypes.any}
+    CustomCell.propTypes = {value: PropTypes.any}
 
     beforeEach(function() {
       columns = [

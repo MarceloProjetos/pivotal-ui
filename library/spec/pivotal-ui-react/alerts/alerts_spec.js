@@ -1,5 +1,5 @@
 import '../spec_helper'
-import ReactTestUtils from 'react-addons-test-utils'
+
 import {SuccessAlert, InfoAlert, WarningAlert, ErrorAlert} from 'pui-react-alerts'
 
 describe('Alert Component', () => {
