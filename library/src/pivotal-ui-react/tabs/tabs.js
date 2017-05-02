@@ -2,6 +2,7 @@ import React from 'react';
 import Animation from 'pui-react-mixins/mixins/animation_mixin';
 import {LargeTabs} from './large_tabs';
 import {default as mixin} from 'pui-react-mixins';
+import PropTypes from 'prop-types';
 import {Tab} from './tab';
 import {matches} from './media-size';
 import {SmallTabs} from './small_tabs';
@@ -9,8 +10,6 @@ import uniqueid from 'lodash.uniqueid';
 import 'pui-css-tabs';
 
 export {Tab};
-
-import PropTypes from 'prop-types';;
 
 const privates = new WeakMap();
 
@@ -41,7 +40,7 @@ export class Tabs extends mixin(React.Component).with(Animation) {
   }
 
   static propTypes = {
-    actions: PropTypes.node,
+    actions: PropTypes.oneOfType([PropTypes.node, PropTypes.object]),
     activeKey: PropTypes.number,
     animation: PropTypes.bool,
     defaultActiveKey: PropTypes.any,

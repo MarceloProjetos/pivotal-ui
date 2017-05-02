@@ -18,10 +18,7 @@ export class Input extends React.Component {
     search: PropTypes.bool,
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     success: PropTypes.bool,
-    leftIcon: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element
-    ])
+    leftIcon: PropTypes.oneOfType([PropTypes.node, PropTypes.object])
   }
 
   componentDidMount() {

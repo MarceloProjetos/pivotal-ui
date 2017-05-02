@@ -33,7 +33,7 @@ export class OverlayTrigger extends mixin(React.Component).with(Scrim) {
     display: PropTypes.bool,
     onEntered: PropTypes.func,
     onExited: PropTypes.func,
-    overlay: PropTypes.element,
+    overlay: PropTypes.oneOfType([PropTypes.node, PropTypes.object]),
     pin: PropTypes.bool,
     placement: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
     theme: PropTypes.oneOf(['light', 'dark']),

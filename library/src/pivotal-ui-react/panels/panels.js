@@ -27,8 +27,8 @@ export class PanelTitle extends React.Component {
 
 class PanelHeader extends React.Component {
   static propTypes = {
-    actions: PropTypes.node,
-    header: PropTypes.node,
+    actions: PropTypes.oneOfType([PropTypes.node, PropTypes.object]),
+    header: PropTypes.oneOfType([PropTypes.node, PropTypes.object]),
     subtitle: PropTypes.node
   }
 
@@ -77,9 +77,9 @@ class PanelFooter extends React.Component {
 
 export class Panel extends React.Component {
   static propTypes = {
-    header: PropTypes.node,
+    header: PropTypes.oneOfType([PropTypes.node, PropTypes.object]),
     footer: PropTypes.node,
-    actions: PropTypes.node,
+    actions: PropTypes.oneOfType([PropTypes.node, PropTypes.object]),
     subtitle: PropTypes.node,
     innerClassName: PropTypes.string,
     padding: (props, propName, componentName) => {

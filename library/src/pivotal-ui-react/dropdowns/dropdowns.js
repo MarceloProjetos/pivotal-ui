@@ -36,7 +36,7 @@ export class Dropdown extends mixin(React.Component).with(Scrim, Transition) {
     onEntered: PropTypes.func,
     onExited: PropTypes.func,
     onSelect: PropTypes.func,
-    title: PropTypes.node,
+    title: PropTypes.oneOfType([PropTypes.node, PropTypes.object]),
     toggle: PropTypes.node,
     scroll: PropTypes.bool,
     showIcon: PropTypes.bool,

@@ -8,7 +8,7 @@ import {default as mixin} from 'pui-react-mixins';
 
 export class LargeTabs extends mixin(React.Component).with(Animation) {
   static propTypes = {
-    actions: PropTypes.node,
+    actions: PropTypes.oneOfType([PropTypes.node, PropTypes.object]),
     activeKey: PropTypes.any,
     childArray: PropTypes.array,
     handleClick: PropTypes.func,

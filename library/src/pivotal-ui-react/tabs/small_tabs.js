@@ -43,7 +43,7 @@ class SmallTab extends React.Component {
 
 export class SmallTabs extends React.Component {
   static propTypes = {
-    actions: PropTypes.node,
+    actions: PropTypes.oneOfType([PropTypes.node, PropTypes.object]),
     activeKey: PropTypes.number,
     animation: PropTypes.bool,
     id: PropTypes.string,
