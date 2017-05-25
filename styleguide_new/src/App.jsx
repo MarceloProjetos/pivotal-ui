@@ -5,6 +5,7 @@ import 'pui-css-all'
 import '../stylesheets/app.scss'
 
 import SideBar from './components/Sidebar'
+import RightSideBar from './components/RightSideBar'
 import Content from './components/Content'
 import contentMap, {attachPackagesToWindow} from './helpers/content'
 
@@ -33,6 +34,7 @@ class App extends React.Component {
     return <div id="app">
       <SideBar updateContent={this.updateContent.bind(this)} activePath={this.state.path}/>
       <Content content={this.state.content}/>
+      <RightSideBar tableOfContents={{'header1': ['subheader1', 'subheader2']}} />
     </div>
   }
 }
