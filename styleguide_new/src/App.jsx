@@ -7,7 +7,7 @@ import '../stylesheets/app.scss'
 import SideBar from './components/Sidebar'
 import RightSideBar from './components/RightSideBar'
 import Content from './components/Content'
-import contentMap, {attachPackagesToWindow} from './helpers/content'
+import routes, {attachPackagesToWindow} from './helpers/content'
 
 attachPackagesToWindow()
 
@@ -27,14 +27,15 @@ class App extends React.Component {
   }
 
   static currentContent(path) {
-    return contentMap[path] ? contentMap[path] : contentMap['/404']
+    return routes[path] ? routes[path] : routes['/404']
   }
 
   render() {
+    const sidebarData = this.state.content.sidebar || {}
     return <div id="app">
       <SideBar updateContent={this.updateContent.bind(this)} activePath={this.state.path}/>
       <Content content={this.state.content}/>
-      <RightSideBar tableOfContents={{'header1': ['subheader1', 'subheader2']}} />
+      <RightSideBar tableOfContents={sidebarData} />
     </div>
   }
 }

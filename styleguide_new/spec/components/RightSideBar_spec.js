@@ -14,7 +14,9 @@ describe('RightSideBar', () => {
   });
 
   it('renders a table of contents', () => {
-    expect('.right-sidebar-header').toExist();
-    expect('.right-sidebar-subheader').toExist();
+    expect($('.right-sidebar-header:eq(0)')).toContainText('header1');
+    expect($('.right-sidebar-subheader:eq(0)')).toContainText('sub-header1');
+    expect($('.right-sidebar-subheader:eq(1)')).toContainText('sub-header2');
+    expect($('.right-sidebar-header:eq(1)')).toHaveText('header2');
   })
 });
