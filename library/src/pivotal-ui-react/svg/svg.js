@@ -20,7 +20,7 @@ export class Svg extends React.Component {
 
   svgPathLoader(src) {
     try {
-      return require(`!!babel-loader!react-svg-loader?{"svgo":{"plugins":[{"removeUnknownsAndDefaults":false},{"cleanupNumericValues":false},{"removeUselessStrokeAndFill":false}]}}!../../app/svg/${src}.svg`);
+      return require(`!!babel-loader?{"presets":["react"],"plugins":["add-module-exports"]}!react-svg-loader?{"svgo":{"plugins":[{"removeUnknownsAndDefaults":false},{"cleanupNumericValues":false},{"removeUselessStrokeAndFill":false}]}}!../../app/svg/${src}.svg`);
     } catch (e) {}
   }
 
